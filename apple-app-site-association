@@ -1,0 +1,20 @@
+{
+    "webcredentials":{
+        "apps":[
+            "D95XHVNG2Z.com.ford.cnevapp"
+        ]
+    },
+    "applinks":{
+        "apps":[
+
+        ],
+        "details":[
+            {
+                "appID":"D95XHVNG2Z.com.ford.cnevapp",
+                "paths":[
+                    "*"
+                ]
+            }
+        ]
+    }
+}
