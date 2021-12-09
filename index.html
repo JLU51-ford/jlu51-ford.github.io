@@ -22,6 +22,16 @@
         // var isiOS = !! u.match(/(iphone|ipod|ipad|mac)/i);
         var isiOS = false;
          
+        window.setTimeout(function () {
+           mockClick();
+        }, 100);
+        
+        function mockClick() {
+            document.getElementById('iosopen').onclick=function(e){
+                console.log('bbbbbbbbbbbbbbbbbbb');
+            };
+        }
+        
         function openApp1() {
           window.location.href = applink3;
         }
@@ -206,7 +216,7 @@
 </br>
 打开evapp
 </br>
-<a onclick="openApp1()">点击唤醒app-Aliyun测试地址</a>
+<a id="iosopen" onclick="openApp1()">点击唤醒app-Aliyun测试地址</a>
 </br>
 <a onclick="openApp1()">点击唤醒app-测试地址</a>	
 </br>
