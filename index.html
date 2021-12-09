@@ -23,16 +23,7 @@
         var isiOS = false;
          
         function openApp1() {
-            //alert('1');
-            //alert(isAndroid);
-            //alert(isiOS);
-            if (isAndroid) {
-                android1();
-            }
-            if (isiOS) {
-                ios();
-            }
-            //alert("调用下载失败"); //此处弹窗时，是没有version参数，如果在app中打开，是会有这个参数的
+          window.location.href = deeplink3;
         }
          
         function android1() {
@@ -217,9 +208,9 @@ JS方式打开链接
 </br>
 <a onclick="openApp1()">点击唤醒app-Aliyun测试地址</a>
 </br>
-<a onclick="openApp2()">点击唤醒app-测试地址</a>	
+<a onclick="openApp1()">点击唤醒app-测试地址</a>	
 </br>
-<a onclick="openApp3()">点击唤醒app-生产地址</a>
+<a onclick="openApp1()">点击唤醒app-生产地址</a>
 </br>
      
         <p>evapp</p>
