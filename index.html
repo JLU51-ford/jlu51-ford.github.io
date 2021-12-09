@@ -28,7 +28,7 @@
         }, 100);
         
         function mockClick() {
-            document.getElementById('iosopen').onclick=function(e){
+            document.getElementById('b-btn').onclick=function(e){
                 console.log('bbbbbbbbbbbbbbbbbbb');
             };
         }
@@ -191,8 +191,8 @@
 
 <body style="margin:0;padding:0;">
     <p>Https</p>
-   <button
-        onclick="window.location.href ='https://dsl.apps.pp01.cneast.cf.ford.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com'">测试地址</button>
+   <button id="b-btn"
+        onclick="openApp1()'">打开EVAPP APP APP</button>
     <button
         onclick="window.location.href ='https://www.blueland.fordstore.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com'">生产地址</button>
     </br>
