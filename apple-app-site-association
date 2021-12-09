@@ -12,9 +12,7 @@
         "details":[
             {
                 "appID":"D95XHVNG2Z.com.ford.cnevapp",
-                "paths":[
-                    "*"
-                ]
+                "paths":[ "/"]
             },
             {
                 "appID":"5D762854JD.com.ford.cnevapp.prod",
