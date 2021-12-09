@@ -4,45 +4,286 @@
 <head>
     <meta charset="utf-8">
     <title>deeplink</title>
+    <script>
+        var applink1 = 'https://ody-common-eastchina2.oss-cn-shanghai.aliyuncs.com/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com'; 
+        var applink2 = 'https://dsl.apps.pp01.cneast.cf.ford.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com'; 
+        var applink3 = 'https://www.blueland.fordstore.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com'; 
+        var deeplink1 = 'evapp://ody-common-eastchina2.oss-cn-shanghai.aliyuncs.com/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com'; 
+        var deeplink2 = 'evapp://dsl.apps.pp01.cneast.cf.ford.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com'; 
+        var deeplink3 = 'evapp://www.blueland.fordstore.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com'; 
+     
+        var universal_link = 'ios下载地址';//ios下载地址
+        var getVersionUrl = 'https://a.app.qq.com/o/simple.jsp?pkgname=com.ford.fordpasscn';//Android移动端下载地址
+        var u = navigator.userAgent.toLocaleLowerCase();
+        //console.log(u);
+        var isWeixin = u.match(/MicroMessenger/i) == 'micromessenger'; //判断是不是微信浏览器
+        // var isAndroid = u.indexOf('android') > -1 || u.indexOf('linux') > -1; //android终端或者uc浏览器
+        var isAndroid = true;
+        // var isiOS = !! u.match(/(iphone|ipod|ipad|mac)/i);
+        var isiOS = false;
+         
+        function openApp1() {
+            //alert('1');
+            //alert(isAndroid);
+            //alert(isiOS);
+            if (isAndroid) {
+                android1();
+            }
+            if (isiOS) {
+                ios();
+            }
+            //alert("调用下载失败"); //此处弹窗时，是没有version参数，如果在app中打开，是会有这个参数的
+        }
+         
+        function android1() {
+            //如果是微信,直接下载
+            if (isWeixin) {
+                window.location.href = getVersionUrl; /***Android移动端下载地址***/
+            } else {
+                window.location.href = applink1; /***打开app的协议，有安卓同事提供***/
+                window.setTimeout(function () {
+                    //window.location.href = "Android下载地址";/***Android移动端下载地址***/
+                    window.location.href = getVersionUrl; /***Android移动端下载地址***/
+                }, 100);
+            }
+        }
 
-<span id="totalSecond">5</span>
- 
-<script language="javascript" type="text/javascript"> 
-var second = document.getElementById('totalSecond').textContent; 
- 
-if (navigator.appName.indexOf("Explorer") > -1)  { 
-	second = document.getElementById('totalSecond').innerText; 
-} else { 
-	second = document.getElementById('totalSecond').textContent; 
-} 
- 
-setInterval("redirect()", 1000); 
-function redirect() { 
-if (second < 0) { 
-	location.href = 'https://www.blueland.fordstore.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com'; 
-} else { 
-	if (navigator.appName.indexOf("Explorer") > -1) { 
-		document.getElementById('totalSecond').innerText = second--; 
-	} else { 
-		document.getElementById('totalSecond').textContent = second--; 
-	} 
-} 
-} 
-</script>
+        function openApp2() {
+            //alert('1');
+            //alert(isAndroid);
+            //alert(isiOS);
+            if (isAndroid) {
+                android2();
+            }
+            if (isiOS) {
+                ios();
+            }
+            //alert("调用下载失败"); //此处弹窗时，是没有version参数，如果在app中打开，是会有这个参数的
+        }
+         
+        function android2() {
+            //如果是微信,直接下载
+            if (isWeixin) {
+                window.location.href = getVersionUrl; /***Android移动端下载地址***/
+            } else {
+                window.location.href = applink2; /***打开app的协议，有安卓同事提供***/
+                window.setTimeout(function () {
+                    //window.location.href = "Android下载地址";/***Android移动端下载地址***/
+                    window.location.href = getVersionUrl; /***Android移动端下载地址***/
+                }, 100);
+            }
+        }
 
+        function openApp3() {
+            //alert('1');
+            //alert(isAndroid);
+            //alert(isiOS);
+            if (isAndroid) {
+                android3();
+            }
+            if (isiOS) {
+                ios();
+            }
+            //alert("调用下载失败"); //此处弹窗时，是没有version参数，如果在app中打开，是会有这个参数的
+        }
+         
+        function android3() {
+            //如果是微信,直接下载
+            if (isWeixin) {
+                window.location.href = getVersionUrl; /***Android移动端下载地址***/
+            } else {
+                window.location.href = applink3; /***打开app的协议，有安卓同事提供***/
+                window.setTimeout(function () {
+                    //window.location.href = "Android下载地址";/***Android移动端下载地址***/
+                    window.location.href = getVersionUrl; /***Android移动端下载地址***/
+                }, 100);
+            }
+        }
+
+
+             
+        function deepApp1() {
+            //alert('1');
+            //alert(isAndroid);
+            //alert(isiOS);
+            if (isAndroid) {
+                android11();
+            }
+            if (isiOS) {
+                ios();
+            }
+            //alert("调用下载失败"); //此处弹窗时，是没有version参数，如果在app中打开，是会有这个参数的
+        }
+         
+        function android11() {
+            //如果是微信,直接下载
+            if (isWeixin) {
+                window.location.href = getVersionUrl; /***Android移动端下载地址***/
+            } else {
+                window.location.href = deeplink1; /***打开app的协议，有安卓同事提供***/
+                window.setTimeout(function () {
+                    //window.location.href = "Android下载地址";/***Android移动端下载地址***/
+                    window.location.href = getVersionUrl; /***Android移动端下载地址***/
+                }, 100);
+            }
+        }
+
+        function deepApp2() {
+            //alert('1');
+            //alert(isAndroid);
+            //alert(isiOS);
+            if (isAndroid) {
+                android22();
+            }
+            if (isiOS) {
+                ios();
+            }
+            //alert("调用下载失败"); //此处弹窗时，是没有version参数，如果在app中打开，是会有这个参数的
+        }
+         
+        function android22() {
+            //如果是微信,直接下载
+            if (isWeixin) {
+                window.location.href = getVersionUrl; /***Android移动端下载地址***/
+            } else {
+                window.location.href = deeplink2; /***打开app的协议，有安卓同事提供***/
+                window.setTimeout(function () {
+                    //window.location.href = "Android下载地址";/***Android移动端下载地址***/
+                    window.location.href = getVersionUrl; /***Android移动端下载地址***/
+                }, 100);
+            }
+        }
+
+        function deepApp3() {
+            //alert('1');
+            //alert(isAndroid);
+            //alert(isiOS);
+            if (isAndroid) {
+                android33();
+            }
+            if (isiOS) {
+                ios();
+            }
+            //alert("调用下载失败"); //此处弹窗时，是没有version参数，如果在app中打开，是会有这个参数的
+        }
+         
+        function android33() {
+            //如果是微信,直接下载
+            if (isWeixin) {
+                window.location.href = getVersionUrl; /***Android移动端下载地址***/
+            } else {
+                window.location.href = deeplink3; /***打开app的协议，有安卓同事提供***/
+                window.setTimeout(function () {
+                    //window.location.href = "Android下载地址";/***Android移动端下载地址***/
+                    window.location.href = getVersionUrl; /***Android移动端下载地址***/
+                }, 100);
+            }
+        }
+         
+        function ios() {
+            window.location.href = universal_link + "?schema=" + encodeURIComponent(download_schema);
+        } 
+        </script>
         <style>*,body,html,div,p,img,button,a{border:0;margin:0;padding:0;} </style>
 </head>
 
 <body style="margin:0;padding:0;">
     <p>Https</p>
-
+   <button
+        onclick="window.location.href ='https://dsl.apps.pp01.cneast.cf.ford.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com'">测试地址</button>
     <button
         onclick="window.location.href ='https://www.blueland.fordstore.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com'">生产地址</button>
+    </br>
+    </br>
+    普通A标签方式打开：
+    </br>
+     <a
+        href="https://dsl.apps.pp01.cneast.cf.ford.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com">测试地址</a>
+    <a
+        href="https://www.blueland.fordstore.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com">生产地址</a>
+    </br>
+    </br>
+    _blank A标签方式打开：
+    </br>
+    <a
+        href="https://ody-common-eastchina2.oss-cn-shanghai.aliyuncs.com/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com" target="_blank">Aliyun测试地址</a>
+    <a
+        href="https://dsl.apps.pp01.cneast.cf.ford.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com" target="_blank">测试地址</a>
+    <a
+        href="evapp://dsl.apps.pp01.cneast.cf.ford.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https%3A%2F%2Ffordev-portal-tc.nttdatadm.com%2Fevapp-h5%2F%23%2Factivity%2FactivityDetail%3FactivityId%3D216%26source_module%3D%25E6%25B4%25BB%25E5%258A%25A8%25E5%2588%2597%25E8%25A1%25A8%25E9%25A1%25B5" target="_blank">生产地址</a>
      
+</br>
+JS方式打开链接
+</br>
+<a onclick="openApp1()">点击唤醒app-Aliyun测试地址</a>
+</br>
+<a onclick="openApp2()">点击唤醒app-测试地址</a>	
+</br>
+<a onclick="openApp3()">点击唤醒app-生产地址</a>
+</br>
+     
+        <p>evapp</p>
+        普通A标签方式打开：
     </br>
+    <a
+        href="evapp://dsl.apps.pp01.cneast.cf.ford.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com">测试地址</a>
+    <a
+        href="evapp://www.blueland.fordstore.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com">生产地址</a>
+    </br>
+    </br>
+        _blank A标签方式打开：
+    </br>
+    <a
+        href="evapp://dsl.apps.pp01.cneast.cf.ford.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https://www.baidu.com" target="_blank">测试地址</a>
+    <a
+        href="evapp://dsl.apps.pp01.cneast.cf.ford.com.cn/appdownload?cookieName=EVWebviewCookie&tokenType=SCRM&url=https%3A%2F%2Ffordev-portal-tc.nttdatadm.com%2Fevapp-h5%2F%23%2Factivity%2FactivityDetail%3FactivityId%3D216%26source_module%3D%25E6%25B4%25BB%25E5%258A%25A8%25E5%2588%2597%25E8%25A1%25A8%25E9%25A1%25B5" target="_blank">生产地址</a>
+    </br>
+        JS方式打开链接
+    </br>
+        <a onclick="deepApp1()">点击唤醒app-Aliyun测试地址</a>
         </br>
-        <a onclick="testIosOpenDeeplink()">测试iOS打开deeplinkXXXXX</a>
+        <a onclick="deepApp2()">点击唤醒app-测试地址</a>	
+        </br>
+        <a onclick="deepApp3()">点击唤醒app-生产地址</a>
         </br>
     </br>
+        _blank A标签方式打开：
+</br>
+accept="video/mp4" capture='user'
+</br>
+<input type="file" id='video' accept="video/mp4" capture='user' />
+</br>
+</br>
+accept="video/mp4"
+</br>
+<input type="file" id='video' accept="video/mp4" /> 
+</br>
+</br>
+accept="video/mp4;image/*"
+<input type="file" id='video' accept="video/mp4;image/*" />
+</br>
+</br>
+accept="video/mp4;image/*"  capture='camera'
+</br>
+<input type="file" id='video' accept="video/mp4;image/*"  capture='camera' />
+</br>
+</br>
+accept="video/mp4" accept="image/"
+</br>
+<input type="file" id='video' accept="video/mp4" accept="image/"/> 
+</br>
+</br>
+accept="image/*" multiple
+</br>
+<input type="file" accept="image/*" multiple />
+</br>
+</br>
+</br>
+accept="text/html"
+</br>
+<input type="file" accept="text/html" />
+</br>
+     
 </body>
+
 </html>
