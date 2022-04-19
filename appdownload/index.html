@@ -10,14 +10,14 @@
 	<script src="https://cdn.bootcss.com/jquery/2.0.1/jquery.js">
 	</script>
 	<body>
-		body
+		test phone number
 		<script>
 			if (window.EVWebviewChannel) {
     EVWebviewChannel.postMessage(JSON.stringify({
-        function: "callNativeLogin"
+        function: "callPhoneNumber"
         params: {
-            "tokenType": "DSL",
-            "reopenUrl": ""
+            "phoneNumber": "18221688937",
+            "countryCode": "86"
         }
     }));
 } else {
