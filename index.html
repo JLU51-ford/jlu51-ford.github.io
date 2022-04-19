@@ -1,19 +1,30 @@
-<!doctype html> <html lang="en"> <head><meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <title>Document</title>
-</head> <script src="https://cdn.bootcss.com/jquery/2.0.1/jquery.js"></script> <body>
-<script>
-if (window.EVWebviewChannel) {
-EVWebviewChannel.postMessage(JSON.stringify({
-"function": "callNativeLogin"
-"params": {
-"reopenkUrl": ""
- }
-}));
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>
+			Document
+		</title>
+	</head>
+	<script src="https://cdn.bootcss.com/jquery/2.0.1/jquery.js">
+	</script>
+	<body>
+		test phone number
+		<script>
+			if (window.EVWebviewChannel) {
+    EVWebviewChannel.postMessage(JSON.stringify({
+        function: "callPhoneNumber"
+        params: {
+            "phoneNumber": "18221688937",
+            "countryCode": "86"
+        }
+    }));
 } else {
-$('body').html('<p>hello world</p>');
+    $('body').html('<p>hello world</p>');
 }
-</script>
+		</script>
+		
+	</body>
 
-body
-
-</body>
 </html>
