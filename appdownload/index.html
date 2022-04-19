@@ -3,9 +3,9 @@
 <script>
 if (window.EVWebviewChannel) {
 EVWebviewChannel.postMessage(JSON.stringify({
-"function": "callNativeLogin"
-"params": {
-"reopenkUrl": ""
+function: "callNativeLogin"
+params: {
+"reopenUrl": ""
  }
 }));
 } else {
